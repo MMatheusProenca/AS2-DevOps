@@ -3,9 +3,9 @@
 cd ./cypress/cucumber-json/
 
 
-TEST=`cat Google.cucumber.json | jq -r '.[].elements[].id'| wc -l `
+TEST=`cat WebApp.cucumber.json | jq -r '.[].elements[].id'| wc -l `
 
-limit=`cat Google.cucumber.json | jq '. | length'`
+limit=`cat WebApp.cucumber.json | jq '. | length'`
 
 FAILURES=0
 SKIP=0
@@ -15,13 +15,13 @@ for i in $(seq 0 $limit); do
 for j in $(seq 0 $limit); do
    if [ $i -ge 0 ] 
    then
-        if [ `cat Google.cucumber.json | jq ".[$i].elements[$j]"| uniq -c | grep "status"| grep -v -e "skipped" | grep -v -e "pending"| grep -c "failed"` -gt 0 ]
+        if [ `cat WebApp.cucumber.json | jq ".[$i].elements[$j]"| uniq -c | grep "status"| grep -v -e "skipped" | grep -v -e "pending"| grep -c "failed"` -gt 0 ]
         then   
             FAILURES=$((FAILURES+1));
-        elif [ `cat Google.cucumber.json | jq ".[$i].elements[$j]"| uniq -c | grep "status"| grep -v -e "failed" |  grep -v -e "pending"| grep -c "skipped"` -gt 0 ]
+        elif [ `cat WebApp.cucumber.json | jq ".[$i].elements[$j]"| uniq -c | grep "status"| grep -v -e "failed" |  grep -v -e "pending"| grep -c "skipped"` -gt 0 ]
         then   
             SKIP=$((SKIP+1));
-        elif [ `cat Google.cucumber.json | jq ".[$i].elements[$j]"| uniq -c | grep "status"| grep -v -e "failed" |  grep -v -e "skipped" | grep -c "pending"` -gt 0 ]
+        elif [ `cat WebApp.cucumber.json | jq ".[$i].elements[$j]"| uniq -c | grep "status"| grep -v -e "failed" |  grep -v -e "skipped" | grep -c "pending"` -gt 0 ]
         then   
             PENDING=$((PENDING+1));
     fi
