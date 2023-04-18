@@ -1,18 +1,18 @@
 [
   {
-    "description": "  I want to open a search engine",
+    "description": "I want to open a web app",
     "keyword": "Feature",
-    "name": "Google Main Page",
+    "name": "App main page",
     "line": 1,
-    "id": "google-main-page",
+    "id": "app-main-page",
     "tags": [],
-    "uri": "Google.feature",
+    "uri": "WebApp.feature",
     "elements": [
       {
-        "id": "google-main-page;opening-a-search-engine-page",
+        "id": "app-main-page;opening-a-web-app-page",
         "keyword": "Scenario",
         "line": 6,
-        "name": "Opening a search engine page",
+        "name": "Opening a web app page",
         "tags": [
           {
             "name": "@focus",
@@ -25,7 +25,7 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
-            "name": "I open Google page",
+            "name": "I open app page",
             "result": {
               "status": "passed",
               "duration": 2148000000
@@ -35,7 +35,7 @@
             "arguments": [],
             "keyword": "Then ",
             "line": 8,
-            "name": "I see \"Google\" in the title",
+            "name": "I see \"Anime-se!\" in the title",
             "result": {
               "status": "passed",
               "duration": 20000000
