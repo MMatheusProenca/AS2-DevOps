@@ -4,5 +4,6 @@
         "configFile": "reporter-config.json"
     },
     "videoCompression": false,
-    "testFiles": "**/*.{feature,features}"
+    "testFiles": "**/*.{feature,features}",
+    "baseUrl": "https://mmatheusproenca.github.io/AS2-DevOps"
 }

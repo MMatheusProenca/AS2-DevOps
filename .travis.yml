@@ -12,8 +12,8 @@ only:
   - test-ci
   
 script:
-  - docker pull MMatheusProenca/AS2-DevOps
-  - docker run -v $PWD/:/app/report/ MMatheusProenca/AS2-DevOps
+  - docker pull matheushrproenca/as2
+  - docker run -v $PWD/:/app/report/ matheushrproenca/as2
 
 # after_script:
 #   - bash ./telegram_notification.sh

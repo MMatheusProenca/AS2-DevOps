@@ -1,6 +1,6 @@
 [
   {
-    "description": "I want to open a web app",
+    "description": "  I want to open a web app",
     "keyword": "Feature",
     "name": "App main page",
     "line": 1,
@@ -28,7 +28,7 @@
             "name": "I open app page",
             "result": {
               "status": "passed",
-              "duration": 2148000000
+              "duration": 740000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I see \"Anime-se!\" in the title",
             "result": {
               "status": "passed",
-              "duration": 20000000
+              "duration": 5000000
             }
           }
         ]

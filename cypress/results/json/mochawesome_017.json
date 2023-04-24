@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-04-24T17:29:02.390Z",
+    "end": "2023-04-24T17:29:02.772Z",
+    "duration": 382,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b4f56238-191d-44a0-b4a2-cd9ea52f996b",
+      "title": "",
+      "fullFile": "cypress/integration/WebApp.feature",
+      "file": "cypress/integration/WebApp.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "52d7875a-877a-4c97-9bca-2f36d94b578f",
+          "title": "App main page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Opening a web app page",
+              "fullTitle": "App main page Opening a web app page",
+              "timedOut": null,
+              "duration": 341,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"videos/WebApp.feature.mp4\"",
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "Error: Step implementation missing for: I open app page",
+                "estack": "Error: Step implementation missing for: I open app page\n    at Context.resolveAndRunStepDefinition (http://localhost:59538/__cypress/tests?p=cypress/integration/WebApp.feature:6986:11)\n    at Context.eval (http://localhost:59538/__cypress/tests?p=cypress/integration/WebApp.feature:6301:35)",
+                "diff": null
+              },
+              "uuid": "bf456350-77e9-4cb2-98e8-bbc4dbc24497",
+              "parentUUID": "52d7875a-877a-4c97-9bca-2f36d94b578f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bf456350-77e9-4cb2-98e8-bbc4dbc24497"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 341,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
