@@ -35,7 +35,7 @@ after_success:
   - git init
   - git config user.name "Travis CI"
   - git config user.email "travis@travis.org"
-  - git add cucumber_report.html
+  - git add .
   - git commit -m "Deploy to GitHub Pages"
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" main:gh-pages
   - echo $RESULT
