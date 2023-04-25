@@ -15,8 +15,17 @@ script:
   - docker pull matheushrproenca/as2
   - docker run -v $PWD/:/app/report/ matheushrproenca/as2
 
-# after_script:
-#   - bash ./telegram_notification.sh
+after_script:
+stage: Static Application Security Testing
+script:
+  - pip install -r requirements.txt
+  - pip install bandit
+  - 'bandit -r app.py -f json -o bandit-output.json'
+artifacts:
+  when: always
+  paths: [bandit-output.json]
+allow_failure: true
+
   
 after_success:
 
